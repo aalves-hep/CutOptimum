@@ -1,0 +1,67 @@
+{
+    # Input files
+    "input_dir"   : "../../data/HPortal/",
+    "input_file"  : "hhaaxx_kappa1.csv",
+    
+    # Output files
+    "output_file1"  :'best_cuts_'+str(today.tm_mday)+uc+str(today.tm_mon)+uc+str(today.tm_year)+'.txt', 
+    "output_file2"  :'best_cut_plot_'+str(today.tm_mday)+uc+str(today.tm_mon)+uc+str(today.tm_year)+'.pdf', 
+    "output_file3"  :'best_mva_plot_'+str(today.tm_mday)+uc+str(today.tm_mon)+uc+str(today.tm_year)+'.pdf', 
+    "output_dir"  : "../../results/HPortal/",
+
+    # Options flags
+    "n_threads"   : 3,
+    
+    "isLogLRatio" : False,
+    "num_llr_bins": 20,
+    "npseudos"    : 500,
+    "mvariables"  : ('pta1','pta2','etmiss','Maa','Raa','dphiaa','dphia2miss','Barr','MT1','MT2','rsmin0','njets'),
+
+    "isgrid"      : False,
+    "gridvars"    : ('pta1','pta2','etmiss'), #,'Maa','Raa','dphiaa','dphia2miss','Barr','MT1','MT2','rsmin0','njets'],
+    
+    "isopt"       : True,
+    "isplot"      : True,
+    "iswrite"     : True,
+
+    # Search parameters
+    "evaluations" : 500,
+    "search_type" : 'tpe',
+
+    # Physical parameters
+    "Luminosity"  : 3000.,
+    "ams_type"    : 'LiMa',
+    "systematics" : 0.05,
+    "skew_param"  : 0.1,
+    "espaco"      : 'user', # auto is not working well
+    "auto_bins"   : 100,
+    "isconstraint": True,
+    "constraints" : (0.1, 10., 'sob'), #[S,B]
+    "cutvariables": ('pta1','pta2','etmiss','Maa','Raa','dphiaa','dphia2miss','Barr','MT1','MT2','rsmin0','njets'),
+    "auto_type"   : True,
+    "cut_type"    : {0:['gt',0], 1:['gt',0], 2:['gt',0], 3:['sym_in',125.], 4:['lt',0], 5:['lt',0], 6:['gt',0], 
+                     7:['sym_in',0], 8:['gt',0], 9:['gt',0], 10:['gt',0], 11:['gt',0]},
+
+    "limiar_space": (
+                     (20.,200.,1.),
+                     (20.,200.,1.),
+                     (20.,500.,1.),
+                     (1.,15.,0.1),
+                     (0.,5.,0.05),
+                     (0.,3.,0.01),
+                     (0.,3.,0.01),
+                     (0.,1.,0.01),
+                     (0.,500.,1.),
+                     (0.,500.,1.),
+                     (0.,500.,1.),
+                     (0, 10, 1)
+                     ),
+
+    "limiar_grid" : {
+                     'pta1':(20.,60.,20.),
+                     'pta2':(20.,60.,20.),
+                     'etmiss':(50.,100.,50.)
+                    },
+
+    "limiar_manual":(100., 30., 100., 10., 2.2, 1.5, 2.2, 0.5, 200., 200., 300., 1)
+}

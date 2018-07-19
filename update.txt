@@ -1,0 +1,13 @@
+previous updates: several modifications done on the original program:
+	 - grid search available
+	 - manual and automatic types of cuts
+	 - MVA available (under tests)
+	 - several statistic metrics added
+	 - constraints option added (minimum number of events , minimum S over B)
+	 - manual cuts
+
+07-03-18: - Parameters dictionary read from an external card - sigopt_card.dat
+	  - sigopt executable created, now SigOpt should be ran as ./sigopt
+
+07-19-18: - Vectors in sigopt_card.dat from lists to tuples
+          - weight and class columns can be placed anywhere in the data matrix

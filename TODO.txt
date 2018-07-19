@@ -1,0 +1,10 @@
+
+ -- Automatic ranges of variables do not work yet
+ -- Train/test split option
+ -- Load serialized data
+ -- Improve plots and plots options
+ -- Offer option of pre-selection cuts 
+ -- Migrate to Skopt ???
+ -- Implement XGBoost classification
+ -- Get a better layout for running screen/ output file
+ -- Include sound marks
